@@ -1,9 +1,5 @@
-import React, { Component, useState, useRef } from 'react'
+import React from 'react';
 
-const App = () => {
-    return(
-        <header>Видеоплеер</header>
-    )
-}
+const App = () => <header>Видеоплеер</header>;
 
-export default App
+export default App;

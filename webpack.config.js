@@ -12,7 +12,7 @@ module.exports = {
         main: path.resolve(__dirname, './src/index.js'),
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './build'),
         filename: '[name].bundle.js',
         publicPath: ''
     },
@@ -21,7 +21,7 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-        contentBase: path.resolve(__dirname, './dist'),
+        contentBase: path.resolve(__dirname, './build'),
         open: true,
         compress: true,
         hot: true,
