@@ -1,10 +1,174 @@
 body {
-    background-color: #8B9898;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f5f5;
+  background-size: cover;
 }
 
-.button {
-    width: 100px;
-    height: 25px;
-    color: #00C853;
-    background-color: #1C246B;
+.hide {
+  display: none;
+}
+
+.controls {
+  background-color: #8b9898;
+}
+
+.play_pause_btn {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 15px;
+  transition: all 0.15s ease-out;
+}
+.play_pause_btn:hover {
+  background: rgba(203, 133, 137, 0.75);
+}
+.svg_play_pause {
+  fill: #fff;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 2px;
+}
+
+.menu__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper__volume {
+  display: flex;
+}
+
+.mute_unmute_btn {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 15px;
+  transition: all 0.15s ease-out;
+  background: none;
+}
+
+.mute_unmute_btn:focus {
+  background: rgba(203, 133, 137, 0.75);
+}
+
+.svg_mute_unmute {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+}
+
+.svg_mute_unmute path,
+.svg_mute_unmute polygon,
+.svg_mute_unmute rect {
+  fill: #fff;
+}
+
+.svg_mute_unmute circle {
+  stroke: #fff;
+  stroke-width: 2;
+}
+
+.player {
+  position: relative;
+  max-width: 750px;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  font-size: 0;
+  overflow: hidden;
+}
+
+.player:fullscreen {
+  max-width: none;
+  width: 100%;
+}
+
+.player:-webkit-full-screen {
+  max-width: none;
+  width: 100%;
+}
+
+.player__video {
+  width: 100%;
+}
+
+.player__button {
+  background: none;
+  border: 0;
+  line-height: 1;
+  color: white;
+  text-align: center;
+  outline: 0;
+  padding: 0;
+  margin: 5px;
+  cursor: pointer;
+  max-width: 50px;
+}
+
+.player__button:focus {
+  border-color: #ffc600;
+}
+
+.player:hover {
+  transform: translateY(0);
+}
+
+.player:hover .progress {
+  height: 15px;
+}
+
+.player__controls > * {
+  flex: 1;
+}
+
+.progress {
+  flex: 10;
+  position: relative;
+  display: flex;
+  flex-basis: 100%;
+  height: 5px;
+  transition: height 0.3s;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.progress__filled {
+  width: 50%;
+  background: #ffc600;
+  flex: 0;
+  flex-basis: 0%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 0 5px;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }

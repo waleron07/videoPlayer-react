@@ -10,6 +10,7 @@
   },
   "rules": {
     "max-depth": ["warn", 4],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "id-length": ["warn", { "exceptions": ["i", "j"], "min": 2 }],
     "no-lonely-if": ["error"],
     "no-plusplus": ["error", {"allowForLoopAfterthoughts": true}],
